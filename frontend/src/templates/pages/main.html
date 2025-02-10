@@ -1,0 +1,43 @@
+<div class="main-page">
+
+    <h1 class="titles">Главная</h1>
+
+    <div class="date-actions d-flex flex-wrap">
+
+        <div class="datepicker-container d-flex align-items-center flex-wrap">
+            <button id="todayBtn" class="date-btn btn btn-secondary me-2 mb-2">Сегодня</button>
+            <button id="weekBtn" class="date-btn btn btn-outline-secondary me-2 mb-2">Неделя</button>
+            <button id="monthBtn" class="date-btn btn btn-outline-secondary me-2 mb-2">Месяц</button>
+            <button id="yearBtn" class="date-btn btn btn-outline-secondary me-2 mb-2 ">Год</button>
+            <button id="allBtn" class="date-btn btn btn-outline-secondary me-2 mb-2">Все</button>
+            <button id="intervalBtn" class="date-btn btn btn-outline-secondary me-2 mb-2">Интервал</button>
+
+            <div id="dateRangeInputs" class="date-range d-flex align-items-center d-none">
+
+                <div class="date-selecting"> с</div>
+                <input type="text" id="startDate" class="datepicker-btn" placeholder="Дата">
+
+                <div class="date-selecting">по</div>
+                <input type="text" id="endDate" class="datepicker-btn" placeholder="Дата">
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="main-chart-container d-flex justify-content-evenly align-items-center text-center">
+
+        <div class="chart-container">
+            <div class="chart-title">Доходы</div>
+            <canvas id="incomeChart"></canvas>
+        </div>
+
+        <div class="chart-divider"></div>
+
+        <div class="chart-container">
+            <div class="chart-title">Расходы</div>
+            <canvas id="expensesChart"></canvas>
+        </div>
+
+    </div>
+</div>

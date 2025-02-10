@@ -1,0 +1,19 @@
+<div class="expenses-create">
+    <h1 class="titles">Создания категории расходов</h1>
+
+    <div class="category-create-block">
+
+        <input class="category-create-input form-control" type="text"
+               aria-describedby="inputGroupPrepend" id="expenseTitle" placeholder="Название..." required>
+
+        <div class="valid-feedback" id="expenseTitleError">
+            Введите название категории.
+        </div>
+
+        <div class="category-create-actions">
+            <!--на данный момент обе кнопки пока ведут на основную страницу доходов -->
+            <button type="button" class="btn btn-success me-2" id="createButton">Создать</button>
+            <a href="/expenses" class="btn btn-danger">Отмена</a>
+        </div>
+    </div>
+</div>

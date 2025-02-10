@@ -1,0 +1,41 @@
+<div class="income-and-expenses-edit">
+
+    <h1 class="titles">Редактирование дохода/расхода</h1>
+
+    <div class="category-create-block">
+
+        <select class="category-create-input form-select" id="operationSelector" disabled>
+            <option value="1">Доход</option>
+            <option value="2">Расход</option>
+        </select>
+
+        <select class="category-create-input form-select" id="operationCategory">
+<!--            <option value="">Зарплата</option>-->
+        </select>
+        <div class="valid-feedback" id="operationCategoryError">
+            Вам нужно выбрать категорию.
+        </div>
+
+        <input class="category-create-input form-control" type="number" id="operationAmount" placeholder="Сумма в $">
+        <div class="valid-feedback" id="operationAmountError">
+            Вам нужно указать сумму.
+        </div>
+
+        <input class="category-create-input form-control" type="text" placeholder="Дата" readonly="readonly" id="operationDatepicker">
+        <div class="valid-feedback" id="operationDatepickerError">
+            Вам нужно выбрать дату.
+        </div>
+
+        <input class="category-create-input form-control" type="text" placeholder="Напишите комментарий" id="operationCommentary">
+        <div class="valid-feedback" id="operationCommentaryError">
+            Вам нужно написать комментарий.
+        </div>
+
+        <div class="category-create-actions">
+            <button type="button" class="btn btn-success me-2" id="editButton">Сохранить</button>
+            <a href="/income-and-expenses" class="btn btn-danger">Отмена</a>
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,94 @@
+
+@media screen and (max-width: 1230px) {
+    .main-chart-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .chart-divider {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1099px) {
+    .table-title {
+        font-size: 13px;
+    }
+    tbody > tr > td {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .table-actions {
+        margin: 0 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .login-form {
+    margin: 0 10px;
+    }
+
+
+    .custom-sidebar {
+        position: fixed;
+        left: -236px; /* Смещается за экран */
+        top: 0;
+        transition: left 0.3s ease;
+        z-index: 1000;
+        display: block; /* Показывает, но вне видимости */
+        height: 100vh; /* Полная высота экрана */
+        background-color: #fff; /* Цвет фона для сайдбара */
+    }
+
+    .titles {
+        text-align: center;
+        margin: 0 10px 40px 10px;
+    }
+
+    .content-styles {
+        padding: 100px 20px;
+    }
+
+    .category-container {
+        justify-content: center;
+    }
+
+    .category-create-block {
+        margin: 0 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu {
+        margin-bottom: 100%;
+    }
+    .creation-actions {
+        text-align: center;
+        margin: 0 0 40px 0;
+    }
+    .date-actions {
+        margin: 20px 20px 40px 20px;
+    }
+    .datepicker-container {
+        justify-content: center;
+    }
+    .datepicker-btn {
+        font-size: 0.66rem;
+        width: 80px;
+        margin: 0 10px 10px 0;
+    }
+    .table-actions {
+        margin: 0;
+    }
+    .chart-container {
+        margin-bottom: 30px;
+    }
+    .table-responsive-xl {
+        margin: 0 10px;
+    }
+
+}
+

@@ -1,0 +1,36 @@
+<div class="income">
+    <h1 class="titles">Доходы</h1>
+
+    <div class="category-container d-flex flex-wrap gap-3" id="category-container">
+
+<!--        <div class="category-block">-->
+<!--            <div class="block-title">Депозиты</div>-->
+<!--            <div class="category-actions">-->
+<!--                <a href="/income-edit" class="btn btn-primary me-2">Редактировать</a>-->
+<!--                <a href="#" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">Удалить</a>-->
+<!--            </div>-->
+<!--        </div>-->
+
+
+        <a href="/income-create"
+           class="category-block add-new d-flex align-items-center justify-content-center" id="addNew">+</a>
+
+    </div>
+
+    <div class="modal" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <div class="modal-title text-center" id="deleteModalLabel">Вы действительно хотите
+                        удалить категорию?
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center border-0">
+                    <button type="button" class="btn btn-success btn-modal" id="deleteButton">Да, удалить</button>
+                    <button type="button" class="btn btn-danger btn-modal" data-bs-dismiss="modal">Не удалять</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
