@@ -6,7 +6,7 @@ export class Income {
     readonly openNewRoute: (url: string) => Promise<void>;
     private selectedIncomeId: string | null;
     private selectedIncomeTitle: string | null;
-    readonly modalInstance: any; // // ТУТ ЧТО НЕ ПОЙМУ ???
+    readonly modalInstance: bootstrap.Modal | null;
 
     constructor(openNewRoute: (url: string)=> Promise<void>) {
         this.openNewRoute = openNewRoute;
@@ -14,9 +14,8 @@ export class Income {
         this.selectedIncomeTitle = null;
 
         const deleteModalElement: HTMLElement | null = document.getElementById('deleteModal');
+        this.modalInstance = deleteModalElement ? new bootstrap.Modal(deleteModalElement) : null;
         if (deleteModalElement) {
-            this.modalInstance = new bootstrap.Modal(deleteModalElement);
-
             deleteModalElement.addEventListener('hidden.bs.modal', () => {
                 document.querySelectorAll('.modal-backdrop').forEach(backdrop => backdrop.remove());
             });

@@ -1,5 +1,6 @@
 import config from "../config/config";
 import { UserInfoType } from "../types/user-info.type";
+import {TokensType} from "../interfaces/tokens-type.interface";
 
 export class AuthUtils {
     public static accessTokenKey: string = "accessToken";
@@ -53,7 +54,7 @@ export class AuthUtils {
                     });
 
                     if (response && response.status === 200) {
-                        const tokens: any = await response.json(); // ТУТ КАКОЙ ТИП НЕ ПОЙМУ ???
+                        const tokens: TokensType = await response.json(); // ТУТ КАКОЙ ТИП НЕ ПОЙМУ ???
                         if (tokens && !tokens.error) {
                             this.setAuthInfo(
                                 tokens.tokens.accessToken,

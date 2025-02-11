@@ -18,7 +18,7 @@ export class HttpUtils {
             }  as { [key: string]: string },
         }
 
-       let tokenData: any = AuthUtils.getAuthInfo(AuthUtils.accessTokenKey); // ТУТ КАКОЙ ТИП НЕ ПОЙМУ ???
+       let tokenData: ReturnType<typeof AuthUtils.getAuthInfo> = AuthUtils.getAuthInfo(AuthUtils.accessTokenKey);
        let token: string | null = null;
 
        if (typeof tokenData === 'string') {

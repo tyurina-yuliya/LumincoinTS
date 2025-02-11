@@ -2,46 +2,11 @@ import Chart from "chart.js/auto";
 import {DatePickingUtil} from "../ulits/date-picking-util";
 import {HttpUtils} from "../ulits/http-utils";
 import { RequestResultType } from "../types/request-result.type";
-
-interface Operation {
-    id: number;
-    type: 'income' | 'expense';
-    amount: number;
-    category: string;
-    date: string;
-    comment?: string;
-}
-interface Operations {
-    category: string;
-    amount: number;
-}
-
-interface ChartData {
-    labels: string[];
-    options: {
-        scales: {
-            y: {
-                beginAtZero: boolean;
-            };
-        };
-    };
-    datasets: {
-        label: string;
-        data: number[];
-        backgroundColor: string[];
-        hoverOffset: number;
-    }[];
-}
-
-interface legendMargin {
-    id: string;
-    beforeInit(chart: {
-        legend: {
-            height: number;
-            fit: () => void;
-        };
-    }): void;
-}
+import { ChartConfiguration } from "chart.js";
+import {Operation} from "../interfaces/operation.interface";
+import {Operations} from "../interfaces/operations.interface";
+import {ChartData} from "../interfaces/chart-data.interface";
+import {legendMargin} from "../interfaces/legend-margin.interface";
 
 export class Main {
     readonly openNewRoute: (url: string) => Promise<void>;
@@ -177,7 +142,7 @@ export class Main {
             ],
         };
 
-        let config: string | number | boolean | ChartData | any = { // ТУТ КАКОЙ ТИП НЕ ПОЙМУ, без any ругается на plugins ???
+        let config: ChartConfiguration | any = {
             type: "pie",
             data: data,
             options: {
@@ -240,7 +205,7 @@ export class Main {
             ],
         };
 
-        let config: string | number | boolean | ChartData | any = { // ТУТ КАКОЙ ТИП НЕ ПОЙМУ, без any ругается на plugins ???
+        let config: ChartConfiguration | any = {
             type: "pie",
             data: data,
             options: {

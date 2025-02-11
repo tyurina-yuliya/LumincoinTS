@@ -1,11 +1,12 @@
 import {DatePickingUtil} from "../../ulits/date-picking-util";
 import {HttpUtils} from "../../ulits/http-utils";
 import { RequestResultType } from "../../types/request-result.type";
+import {Category} from "../../interfaces/category.interface";
 
-interface Category {
-    id: number;
-    title: string;
-}
+// interface Category {
+//     id: number;
+//     title: string;
+// }
 
 export class IncomeAndExpensesCreate {
     readonly openNewRoute: (url: string) => Promise<void>;

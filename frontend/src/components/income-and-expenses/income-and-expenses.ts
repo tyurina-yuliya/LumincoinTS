@@ -2,15 +2,16 @@ import {DatePickingUtil} from "../../ulits/date-picking-util";
 import {HttpUtils} from "../../ulits/http-utils";
 import { FilteredOperationsType } from "../../types/filtered-operations.type";
 import { RequestResultType } from "../../types/request-result.type";
+import {Operation} from "../../interfaces/operation.interface";
 
-interface Operation {
-    id: number;
-    type: 'income' | 'expenses';
-    category: string;
-    amount: number;
-    date: string;
-    comment?: string;
-}
+// interface Operation {
+//     id: number;
+//     type: 'income' | 'expenses';
+//     category: string;
+//     amount: number;
+//     date: string;
+//     comment?: string;
+// }
 
 export class IncomeAndExpenses {
     readonly openNewRoute: (url: string) => Promise<void>;
