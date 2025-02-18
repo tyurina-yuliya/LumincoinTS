@@ -14,9 +14,9 @@ export class Logout {
         this.logout().then();
     }
 
-    private async logout():Promise<void> {
+    private async logout(): Promise<void> {
 
-        await HttpUtils.request('/logout', 'POST', false,{
+        await HttpUtils.request('/logout', 'POST', false, {
             refreshToken: AuthUtils.getAuthInfo(AuthUtils.refreshTokenKey),
         });
         AuthUtils.deleteAuthInfo();

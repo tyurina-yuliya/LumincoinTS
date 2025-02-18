@@ -60,18 +60,6 @@ export class DatePickingUtil {
             },
         });
 
-        // const pieChartStartDatePicker = new AirDatepicker("#startDatePicker", { // не исп
-        //     buttons: "clear",
-        //     autoClose: true,
-        //     onSelect({date}) {
-        //         if (date) {
-        //             endDatePicker.update({
-        //                 minDate: date instanceof Array ? date[0] : date,
-        //             });
-        //         }
-        //     },
-        // });
-
         new AirDatepicker("#operationDatepicker", {
             buttons: "clear",
             autoClose: true,

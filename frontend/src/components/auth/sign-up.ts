@@ -2,14 +2,6 @@ import {AuthUtils} from "../../ulits/auth-utils";
 import config from "../../config/config";
 import {ApiResponse} from "../../interfaces/api-response.interface";
 
-// interface ApiResponse {
-//     error?: string;
-//     user?: {
-//         id: number;
-//         name: string;
-//         lastName: string;
-//     }
-// }
 
 export class SignUp {
     readonly openNewRoute: (url: string) => Promise<void>;
