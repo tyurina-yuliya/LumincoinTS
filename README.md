@@ -5,5 +5,4 @@
 - Bootstrap,
 - Webpack,
 - Mongodb,
-- AdminLTE,
-- GitHub Pages
+- AdminLTE
